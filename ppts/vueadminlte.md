@@ -11,12 +11,12 @@ usemathjax: yes
 ## 如何快速开发并提高效率
 
 [slide]
-# 为何采用vue
+* 为何采用vue
+{:&.rollIn}
+* 积木式开发
 [note]
 模块化开发，组件复用，搭积木式开发。
-[/note]
 
-[slide]
 ## 常用工具的使用
 - bootstrap布局工具的使用，布局规范按照bootstrap走。
 - 字体工具
@@ -27,12 +27,25 @@ usemathjax: yes
 - express起的server还起到了hot reload的功能了
 - mock-server
 - eslint的一些规则，一个介绍性的网站gitbook或者使用vuepress，还有脚手架工具的开发，yo看看
+- 一些组件 VASmallBox.vue 
+[/note]
 
 [slide]
-## vuecli生成的项目的开发流程
-- 开发与生产
+## 概要
+- 开发环境的启动和构建生产环境
+{:&.rollIn}
+- mock-server的配置
+- 前端的自动化测试
+- 代码规范
+- 搭积木
+ - 栅格布局
+ - 常用组件
+ - ajax请求组件。
+ - vuex的使用。
 [note]
-开发与生产的参数配置，比如接口的调用，开发的时候需要调用测试接口，而正式环境需要调用正式接口，这个就需要代码来判断。
+开发环境的启动和构建生产环境  端口配置的一些问题
+ajax请求的固定模式
+何时用vuex呢
 [/note]
 
 [slide]
@@ -49,26 +62,6 @@ usemathjax: yes
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
   },
 ```
-
-[slide]
-## mock 
-mock 数据模拟服务，在不依赖后台接口的时候模拟数据进行开发<br>
-```
-"./node_modules/.bin/json-server ./mock-server/index.js"
-```
-{:&.rollIn}
-### mock数据的配置文件
-```javascript
-module.exports = function () {
-  var data = { products111: [{ "id": 1, 
-  "name": "Awesome Concrete Mouse", "color": "maroon", "department": "Health", "price": "265.00", 
-  "adjective": "Handmade", "material": "Steel", "product": "Chips" }] }
-  return data
-}
-```
-### 浏览器或者ajax请求即可访问这个模拟接口<br>``http://localhost:3000/products111``
-- 接口可以在data数据中配置，详情请查看json-server的文档
-
 [slide]
 ## 命令
 ### 启动开发环境和构建生产环境的命令
@@ -99,5 +92,25 @@ plugins: [
 </div>
 [note]
 为何要区分生产与开发环境呢，为了简化发布流程。
-重点是应用了webpack的一个内置的功能
+重点是应用了webpack的一个内置的功能。
+主要应用场景是在开发环境和正式环境是调用不同的接口的。
 [/note]
+
+[slide]
+## mock 
+mock 数据模拟服务，在不依赖后台接口的时候模拟数据进行开发<br>
+```
+"./node_modules/.bin/json-server ./mock-server/index.js"
+```
+{:&.rollIn}
+### mock数据的配置文件
+```javascript
+module.exports = function () {
+  var data = { products111: [{ "id": 1, 
+  "name": "Awesome Concrete Mouse", "color": "maroon", "department": "Health", "price": "265.00", 
+  "adjective": "Handmade", "material": "Steel", "product": "Chips" }] }
+  return data
+}
+```
+### 浏览器或者ajax请求即可访问这个模拟接口<br>``http://localhost:3000/products111``
+- 接口可以在data数据中配置，详情请查看json-server的文档
