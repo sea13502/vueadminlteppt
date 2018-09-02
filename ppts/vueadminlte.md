@@ -7,6 +7,25 @@ theme: moon
 usemathjax: yes
 
 [slide]
+
+# adminlte
+## 一套丰富的后台ui及交互的组件基于jquery和bootstrap的
+
+[slide]
+
+# 使用vue
+## 模块化开发，丰富的生态，社区强大。
+
+[slide]
+
+# vue与adminlte结合
+# 基于adminlte基础的样式和交互，打造属于我们自己的组件库。
+
+[slide]
+
+# 如何让大家喜欢去用乐意用。这里我们回到vue，vue强大的地方就在于文档和vue-cli这个脚手架。有疑问或者忘记一些用法，文档很容易就能查到。生成项目用cli工具也相当方便。借鉴vue我们也建立了我们的文档网站和cli工具。初期可能功能比较单一，满足的需求不太大，希望大家加入进来。丰富完善他，离合公司所有前端的技术，把这个项目做好，为更多的项目服务。
+
+[slide]
 # 基于vue的adminlte脚手架
 ## 如何快速开发并提高效率
 
