@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "windowstart":"node_modules/.bin/nodeppt start -p 8081 -H 192.168.12.103 -d ppts -w",
-    "build":"node_modules/.bin/nodeppt generate"
+    "build":"node_modules/.bin/nodeppt generate ./ppts/vueadminlte1.md -a"
   },
   "author": "",
   "license": "ISC",
